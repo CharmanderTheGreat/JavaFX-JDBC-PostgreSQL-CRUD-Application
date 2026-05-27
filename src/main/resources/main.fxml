@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/21.0.6"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="Controller">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <Label text="Student Record Management System"/>
+
+    <HBox spacing="10">
+        <Label text="Name:" prefWidth="80"/>
+        <TextField fx:id="txtName" promptText="Enter name"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Course:" prefWidth="80"/>
+        <TextField fx:id="txtCourse" promptText="Enter course"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Year Level:" prefWidth="80"/>
+        <ChoiceBox fx:id="cbYear" prefWidth="150"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Button text="Add" onAction="#addStudent"/>
+        <Button text="Update" onAction="#updateStudent"/>
+        <Button text="Delete" onAction="#deleteStudent"/>
+        <Button text="Clear" onAction="#clearFields"/>
+    </HBox>
+
+    <TableView fx:id="table" prefHeight="300">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="50"/>
+            <TableColumn fx:id="colName" text="Name" prefWidth="150"/>
+            <TableColumn fx:id="colCourse" text="Course" prefWidth="100"/>
+            <TableColumn fx:id="colYear" text="Year Level" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+</VBox>
